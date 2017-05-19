@@ -1,0 +1,61 @@
+@media screen and (max-width: 1080px) {
+  .courses__container {
+    margin: 0 64px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .events__container {
+    flex-direction: column;
+    margin: 0 32px;
+ }
+ .course-page__description-container {
+      margin: 64px 32px;
+  }
+  .course-page__info-container {
+      margin: 64px 32px 0;
+  }
+  .course-page__description {
+    width: 100%;
+  }
+  .courses__container {
+    margin: 0 32px;
+  }
+  .course__title {
+    padding: 8px 8px;
+    font-size: 1.25em;
+  }
+  .course__open {
+    font-size: 1em;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .course-page__description {
+    font-size: 1em;
+  }
+  .course-page__price {
+    font-size: 1em;
+  }
+  .course-page__partecipants {
+    font-size: 1em;
+  }
+  .course-page__timing {
+    font-size: 1em;
+  }
+  .course-page__professor {
+    font-size: 1em;
+  }
+  .courses__container {
+    margin: 0 8px;
+  }
+  .events__container {
+    margin: 0 8px;
+ }
+  .courses__title {
+    font-size: 2em;
+  }
+  .events__title {
+    font-size: 2em;
+  }
+}

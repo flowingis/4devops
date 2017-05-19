@@ -1,0 +1,151 @@
+body {
+  font-family: "Lato", sans-serif;
+  }
+
+mark {
+  background: rgb(4, 177, 141);
+  color: white;
+}
+
+#events {
+}
+
+.events {
+  padding: 48px 0;
+}
+
+.events__container {
+  display: flex;
+  flex-direction: row;
+  margin: 0 160px;
+  flex-wrap: wrap-reverse;
+
+}
+
+.event__container{
+  background: white;
+  border: solid 2px #eee;
+  padding: 16px;
+  margin: 16px;
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+  backface-visibility: hidden;
+  flex-grow: 1;
+  flex-basis: 25%;
+  text-align: center;
+}
+
+.events__title {
+  text-align: center;
+}
+
+.events__title {
+    font-family:  "montserrat", sans-serif;
+    font-size: 3em;
+    color: #2c3e50;
+}
+
+.event__image img {
+  width: 100%;
+}
+
+.event__open{
+  padding: 8px;
+  margin: 16px 0 0 0;
+  background: rgb(4, 177, 141);
+  font-size: 1.5em;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  display: inline-block;
+}
+
+.event__open:hover {
+  background: #2c3e50;
+  color: white;
+  text-decoration: none;
+}
+
+
+/*courses*/
+
+.courses__container {
+  padding: 32px;
+  margin: 16px;
+  margin: 0 240px;
+}
+
+.course__container {
+  display: flex;
+  flex-direction: row;
+  border-bottom: solid 2px #eee;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.courses__title {
+  font-size: 3em;
+  font-family: "montserrat", sans-serif;
+  text-align: center;
+  padding: 0 0 64px;
+  font-weight: 700;
+}
+
+.course__open{
+  padding: 8px 8px;
+  background: rgb(4, 177, 141);
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  font-size: 1.25em;
+}
+
+.course__open:hover {
+  background: #2c3e50;
+  color: white;
+  text-decoration: none;
+}
+.course__title {
+  padding: 8px 8px;
+  font-size: 1.5em;
+}
+
+.events__title {
+  font-size: 3em;
+  font-family: "montserrat", sans-serif;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+
+.event__date {
+  font-size: 1.25em;
+  font-family: "Lato", sans-serif;
+  padding-top: 16px;
+  padding-bottom: 8px;
+}
+
+.event__title {
+  font-size: 2em;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: rgb(4, 177, 141);
+}
+
+.event__place {
+  font-size: 1.25em;
+  font-family: "Lato", sans-serif;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.courses {
+  padding: 0;
+  margin-bottom: 64px;
+}

@@ -1,0 +1,91 @@
+.course-page__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.course-page__info-container {
+  margin: 160px 160px 0;
+
+}
+.course-page__description-container {
+  margin: 64px 160px ;
+}
+
+.course-page__level-is {
+  font-weight: 500;
+}
+
+.course-page__timing-is {
+  font-weight: 500;
+}
+
+.course-page__partecipants-are {
+  font-weight: 500;
+}
+
+.course-page__price-is {
+  font-weight: 500;
+}
+
+.course-page__professor-is {
+  font-weight: 500;
+}
+
+.course-page__title {
+    font-size: 2em;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.course-page__level {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: 16px 0;
+}
+
+.course-page__timing {
+    font-weight: 700;
+    font-size: 1.25em;
+    line-height: 1.50;
+
+}
+
+.course-page__partecipants {
+    font-weight: 700;
+    font-size: 1.25em;
+    line-height: 1.50;
+
+
+}
+
+.course-page__price {
+    font-weight: 700;
+    font-size: 1.25em;
+    line-height: 1.50;
+
+}
+
+.course-page__professor {
+    font-weight: 700;
+    font-size: 1.25em;
+    line-height: 1.50;
+
+}
+.course-page__resources {
+    margin: 16px 0;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.decription__title {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.course-page__description {
+    line-height: 1.50;
+    color: #888888;
+    font-size: 1.25em;
+    width: 70%;
+}
