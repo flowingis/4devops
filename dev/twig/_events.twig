@@ -1,5 +1,17 @@
 <section id="eventi">
 
+  {% for event in metadata.events.list %}
+    <ul>
+      <li>{{ event.date|date('Y-m-d') }}</li>
+      <li>{{ event.description }}</li>
+      <li>{{ event.image }}</li>
+      <li>{{ event.link }}</li>
+      <li>{{ event.venue }}</li>
+      <li>{{ event.street }}</li>
+      <li>{{ event.title }}</li>
+    </ul>
+  {% endfor %}
+
   <div class="events" id="events">
     <div class="events__title">EVENTI</div>
     <div class="events__container">

@@ -1,7 +1,29 @@
-events:
+list:
   -
-    date: 2017-05-22
-    image: nome-file.jpg # il path viene precompilato
-    location: Piazza Sanguinetti, 106 - 47521 Cesena (FC)
-    title: Corso di prova
-    category: courses
+    date: 2016-11-19
+    title: Docker Global Mentor Day
+    description: Il Global Mentor Day di Milano sarà un'opportunità per approcciarsi all'utilizzo di Docker. Ci saranno dei lab per principianti e per utenti intermedi, e i Docker Mentors saranno a disposizione per rispondere alle tue domande.
+    city: Milano
+    street: Via Stefanardo da Vimercate 28, Milano (MI)
+    venue: Coworking LOGIN
+    image: nome-file.jpg
+    link: https://www.eventbrite.it/e/biglietti-devops-docker-all-stars-28392717382
+    soldout: true
+  -
+    date: 2016-11-29
+    title: Docker Global Mentor Day
+    description: I migliori Tool DevOps come Docker ed il suo ecosistema possono rivelarsi la scelta migliore per affrontare al meglio la Digital Trasformation.
+    city: Peschiera Borromeo
+    venue: Microsoft Italia
+    image: nome-file.jpg
+    link: https://www.eventbrite.it/e/biglietti-devops-docker-all-stars-28392717382
+    soldout: true
+  -
+    date: 2016-12-13
+    title: Mesos Meetup
+    description: Meetup italiano su DC/OS e mesos ospite eccezionale Jörg Schad, che terrà anche un workshop gratuito.
+    city: Milano
+    venue: Talent Garden (via Merano)
+    image: nome-file.jpg
+    link: https://www.meetup.com/it-IT/mesos-dcos-Italia/events/235015161/
+    soldout: true
