@@ -1,0 +1,18 @@
+metadata:
+  events: data/events.yaml
+  site: data/site.yaml
+clean: true
+source: source
+destination: build
+collections:
+  courses: ./source/courses/*.md
+markdown:
+  smartypants: true
+  gfm: true
+  tables: true
+permalinks:
+  relative: true
+twig:
+  directory: ./dev/twig
+  view: base.twig
+  cache: false
