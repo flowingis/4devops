@@ -1,12 +1,13 @@
 const AWS = require('aws-sdk')
+const browserSync = require('metalsmith-browser-sync')
 const collections = require('metalsmith-collections')
 const fs = require('fs')
 const markdown = require('metalsmith-markdown')
+const metadata = require('metalsmith-metadata')
 const metalsmith = require('metalsmith')
 const permalinks = require('metalsmith-permalinks')
 const twig = require('metalsmith-twig')
 const yaml = require('js-yaml')
-const metadata = require('metalsmith-metadata')
 
 const m = yaml.safeLoad(fs.readFileSync('config.yaml', 'utf-8'))
 
@@ -32,8 +33,33 @@ function deploy () {
   })
 }
 
-function build (performDeploy) {
+function watch () {
+  metalsmith(__dirname)
+    .source(m.source)
+    .destination(m.destination)
+    .clean(m.clean)
+    .use(browserSync({
+      server: m.destination,
+      files: [m.source, `${m.twig.directory}/**/*.twig`]
+    }))
+    .use(metadata(m.metadata))
+    .use(collections(m.collections))
+    .use(markdown(m.markdown))
+    .use(permalinks(m.permalinks))
+    .use(twig(m.twig))
+    .build(function (err) {
+      if (err) throw err
+      console.log('Metalsmith build process finished successfully.')
+    })
+}
+
+function build (action) {
   console.log('Starting metalsmith build process...')
+
+  if (action === '--watch') {
+    watch()
+    return
+  }
 
   metalsmith(__dirname)
     .source(m.source)
@@ -46,7 +72,7 @@ function build (performDeploy) {
     .use(twig(m.twig))
     .build(function (err) {
       if (err) throw err
-      if (performDeploy) {
+      if (action === '--go') {
         console.log('Metalsmith build process step finished successfully.')
         deploy()
       } else {
@@ -55,14 +81,14 @@ function build (performDeploy) {
     })
 }
 
-var performDeploy = false
+var action = false
 
 process.argv.forEach(function (val, index, array) {
   if (index === 2) {
-    if (val === '--go') {
-      performDeploy = true
+    if (val === '--go' || val === '--watch') {
+      action = val
     }
   }
 })
 
-build(performDeploy)
+build(action)
