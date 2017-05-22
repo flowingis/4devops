@@ -1,0 +1,7 @@
+companies:
+  -
+    date: 2017-05-22
+    image: nome-file.jpg # il path viene precompilato
+    location: Piazza Sanguinetti, 106 - 47521 Cesena (FC)
+    title: Corso di prova
+    category: courses
