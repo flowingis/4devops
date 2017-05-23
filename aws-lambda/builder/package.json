@@ -1,0 +1,26 @@
+{
+  "name": "lamba_build",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "aws-sdk": "^2.56.0",
+    "download": "^6.1.0",
+    "extract-zip": "^1.6.5",
+    "js-yaml": "^3.8.4",
+    "metalsmith": "^2.3.0",
+    "metalsmith-browser-sync": "^1.1.1",
+    "metalsmith-collections": "^0.9.0",
+    "metalsmith-markdown": "^0.2.1",
+    "metalsmith-metadata": "0.0.4",
+    "metalsmith-permalinks": "^0.5.0",
+    "metalsmith-twig": "^1.0.4",
+    "s3": "^4.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "node index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
