@@ -1,14 +1,27 @@
-<header>
-    <div class="container">
-        <div class="row" style="">
-            <div class="col-lg-12">
-                <img class="img-responsive logo" src="img/logo.png" alt="">
-                <div class="intro-text">
-                    <!-- <span class="name"></span> -->
-                    <hr class="star-light">
-                    <span class="skills">Una soluzione DevOps ai problemi della tua azienda</span>
-                </div>
-            </div>
+<header {% if image is defined %} style="background-image:url('{{ image }}');" {% endif %}>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        {% if image is defined %}
+        <div class="intro-text">
+          <hr class="star-light">
+          <span class="skills">
+            {{ title }}
+          </span>
+          <div class="level-container">
+            Livello <span class="level level--{{ level }}">{{ level }}</span>
+          </div>
         </div>
+        {% else %}
+        <img class="img-responsive logo" src="{{ relativePath }}img/logo.png" alt="">
+        <div class="intro-text">
+          <hr class="star-light">
+          <span class="skills">
+            Una soluzione DevOps ai problemi della tua azienda
+          </span>
+        </div>
+        {% endif %}
+      </div>
     </div>
+  </div>
 </header>

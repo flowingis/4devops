@@ -1,12 +1,10 @@
-metadata:
-  companies: data/companies.yaml
-  events: data/events.yaml
-  site: data/site.yaml
 clean: true
 source: source
 destination: build
 collections:
-  courses: ./source/courses/*.md
+  courses:
+    path: ./source/courses/*.md
+    orderBy: level
 markdown:
   smartypants: true
   gfm: true

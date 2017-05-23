@@ -1,12 +1,16 @@
 @media screen and (max-width: 1080px) {
   .courses__container {
-    margin: 0 64px;
+    margin: 0 32px;
   }
+  .events__container {
+    margin: 0 32px;
+   }
 }
+
 @media screen and (max-width: 900px) {
   .events__container {
     flex-direction: column;
-    margin: 0 32px;
+    margin: 0 16px;
  }
  .course-page__description-container {
       margin: 64px 32px;
@@ -18,7 +22,7 @@
     width: 100%;
   }
   .courses__container {
-    margin: 0 32px;
+    margin: 0 16px;
   }
   .course__title {
     padding: 8px 8px;
@@ -27,6 +31,7 @@
   .course__open {
     font-size: 1em;
   }
+
 }
 
 

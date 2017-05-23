@@ -17,9 +17,11 @@ mark {
 .events__container {
   display: flex;
   flex-direction: row-reverse;
-  margin: 0 160px;
+  margin: 0 64px;
   flex-wrap: wrap-reverse;
 }
+
+
 
 .event__container {
   background: white;
@@ -111,6 +113,11 @@ mark {
   color: white;
   font-size: 1.25em;
   white-space: nowrap;
+  display: flex;
+}
+
+.course__link {
+  align-self: center;
 }
 
 .course__open:hover {
@@ -156,4 +163,32 @@ mark {
 .courses {
   padding: 0;
   margin-bottom: 64px;
+}
+
+.star-light::after {
+  /*background: transparent !important;*/
+  border-radius: 100px;
+}
+
+.level-container {
+  margin-top: 12px;
+}
+
+.level {
+  color: white;
+  padding: 8px 16px;
+  background-color: rgb(44,62,80);
+  margin-left: 4px;
+}
+
+.level--base {
+  background-color: rgb(32, 165, 194);
+}
+
+.level--intermedio {
+  background-color: rgb(44,62,80);
+}
+
+.level--avanzato {
+  background-color: rgb(230, 95, 53);
 }

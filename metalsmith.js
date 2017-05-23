@@ -2,14 +2,21 @@ const AWS = require('aws-sdk')
 const browserSync = require('metalsmith-browser-sync')
 const collections = require('metalsmith-collections')
 const fs = require('fs')
+const ignore = require('metalsmith-ignore')
 const markdown = require('metalsmith-markdown')
-const metadata = require('metalsmith-metadata')
 const metalsmith = require('metalsmith')
 const permalinks = require('metalsmith-permalinks')
 const twig = require('metalsmith-twig')
 const yaml = require('js-yaml')
 
-const m = yaml.safeLoad(fs.readFileSync('config.yaml', 'utf-8'))
+
+
+var m = yaml.safeLoad(fs.readFileSync('config.yaml', 'utf-8'))
+m.metadata = {
+  companies: yaml.safeLoad(fs.readFileSync('source/data/companies.yaml', 'utf-8')),
+  events: yaml.safeLoad(fs.readFileSync('source/data/events.yaml', 'utf-8')),
+  site: yaml.safeLoad(fs.readFileSync('source/data/site.yaml', 'utf-8'))
+}
 
 const bucket = 'my.unique.bucket.name'
 const key = 'myBucketKey'
@@ -36,13 +43,14 @@ function deploy () {
 function watch () {
   metalsmith(__dirname)
     .source(m.source)
+    .metadata(m.metadata)
     .destination(m.destination)
     .clean(m.clean)
+    .use(ignore('data/*'))
     .use(browserSync({
       server: m.destination,
       files: [m.source, `${m.twig.directory}/**/*.twig`]
     }))
-    .use(metadata(m.metadata))
     .use(collections(m.collections))
     .use(markdown(m.markdown))
     .use(permalinks(m.permalinks))
@@ -63,9 +71,10 @@ function build (action) {
 
   metalsmith(__dirname)
     .source(m.source)
+    .metadata(m.metadata)
     .destination(m.destination)
     .clean(m.clean)
-    .use(metadata(m.metadata))
+    .use(ignore('data/*'))
     .use(collections(m.collections))
     .use(markdown(m.markdown))
     .use(permalinks(m.permalinks))

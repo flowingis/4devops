@@ -1,7 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% include './_head.twig' %}
-  <body>
-    ciaone
-  </body>
+
+{% include './_head.twig' %}
+
+<body id="page-top">
+
+    {% include './_navbar.twig' %}
+    {% if image is defined %}
+      {% include './_header.twig' with { image: (relativePath ~ 'img/courses/' ~ image) }%}
+    {% else %}
+      {% include './_header.twig' with { image: (relativePath ~ 'img/courses/default.png') }%}
+    {% endif %}
+    <div class="row">
+      <div class="col-lg-6">
+        <ul>
+          <li>
+            <strong>Dove</strong>
+            {{ location }}
+          </li>
+          <li>
+            <strong>Durata</strong>
+            {{ duration }}
+          </li>
+          <li>
+            <strong>Partecipati max</strong>
+            {{ participants }}
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-6">
+        <ul>
+          <li>
+            <strong>Prezzo</strong>
+            {{ location }}
+          </li>
+          <li>
+            {{ tickets }}
+          </li>
+        </ul>
+      </div>
+    </div>
+
+<!--
+    location: Piazza Sanguinetti, 106 - 47521 Cesena (FC)
+    duration: 1 giorno
+    participants: 4
+
+    price: 600€
+    tickets: http://eventbrite.com/
+
+    teacherName: Alexander Watson
+    teacherImage: nome-docente.jpg
+    teacherDescription: Alexander Watson è nato a forlì ed è un boss delle uccisioni multiple
+  -->
+
+
+    <div class="container">
+      {{ contents }}
+    </div>
+    {% include './_footer.twig' %}
+    {% include './_scripts.twig' %}
+</body>
+
 </html>
