@@ -36,7 +36,7 @@ npm run build
 This command will show you your changes into the browser with a localhost URL.
 
 ```
-npm run build --watch
+npm run watch
 ```
 
 #### Deploy
@@ -44,5 +44,5 @@ npm run build --watch
 Leave this command to the push hook to avoid additional local configurations to enable the deploy script.
 
 ```
-npm run build --go
+npm run deploy
 ```

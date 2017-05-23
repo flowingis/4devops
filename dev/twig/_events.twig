@@ -1,60 +1,40 @@
 <section id="eventi">
 
-  {% for event in metadata.events.list %}
-    <ul>
-      <li>{{ event.date|date('Y-m-d') }}</li>
-      <li>{{ event.description }}</li>
-      <li>{{ event.image }}</li>
-      <li>{{ event.link }}</li>
-      <li>{{ event.venue }}</li>
-      <li>{{ event.street }}</li>
-      <li>{{ event.title }}</li>
-    </ul>
-  {% endfor %}
-
   <div class="events" id="events">
     <div class="events__title">EVENTI</div>
     <div class="events__container">
 
-      <div class="event__container">
-        <div class="event__image"><img src="{{ relativePath }}img/events/img-prova.png" alt=""></div>
-        <div class="event__date">23 Maggio 2018</div>
-        <div class="event__title">Progettare e far evolvere strutture in AWS</div>
-        <div class="event__place">Teatro Sarti, via Biasola 5, Faenza, RA (Italy)</div>
-        <a href="#" class="event__open">OPEN</a>
-      </div>
-
-      <div class="event__container">
-        <div class="event__image"><img src="{{ relativePath }}img/events/img-prova.png" alt=""></div>
-        <div class="event__date">23 Maggio 2018</div>
-        <div class="event__title">Progettare e far evolvere strutture in AWS</div>
-        <div class="event__place">Teatro Sarti, via Biasola 5, Faenza, RA (Italy)</div>
-        <a href="#" class="event__open">OPEN</a>
-      </div>
-
-      <div class="event__container">
-        <div class="event__image"><img src="{{ relativePath }}img/events/img-prova.png" alt=""></div>
-        <div class="event__date">23 Maggio 2018</div>
-        <div class="event__title">Progettare e far evolvere strutture in AWS</div>
-        <div class="event__place">Teatro Sarti, via Biasola 5, Faenza, RA (Italy)</div>
-        <a href="#" class="event__open">OPEN</a>
-      </div>
-
-      <div class="event__container">
-        <div class="event__image"><img src="{{ relativePath }}img/events/img-prova.png" alt=""></div>
-        <div class="event__date">23 Maggio 2018</div>
-        <div class="event__title">Progettare e far evolvere strutture in AWS</div>
-        <div class="event__place">Teatro Sarti, via Biasola 5, Faenza, RA (Italy)</div>
-        <a href="#" class="event__open">OPEN</a>
-      </div>
-
-      <div class="event__container">
-        <div class="event__image"><img src="{{ relativePath }}img/events/img-prova.png" alt=""></div>
-        <div class="event__date">23 Maggio 2018</div>
-        <div class="event__title">Progettare e far evolvere strutture in AWS</div>
-        <div class="event__place">Teatro Sarti, via Biasola 5, Faenza, RA (Italy)</div>
-        <a href="#" class="event__open">OPEN</a>
-      </div>
+      {% for event in metadata.events.list %}
+        {% if  event.link is defined %}
+        <a class="event__container" href="{{ event.link }}" target="_blank">
+        {% else %}
+        <div class="event__container">
+        {% endif %}
+          <div class="event__image">
+            {% if  event.image is defined %}
+            <img src="{{ relativePath }}img/events/{{ event.image }}">
+            {% else %}
+            <img src="{{ relativePath }}img/events/default.png">
+            {% endif %}
+          </div>
+          {% if  event.date is defined %}
+            <div class="event__date">{{ event.date|date('Y M d') }}</div>
+          {% endif %}
+          {% if  event.title is defined %}
+            <div class="event__title">{{ event.title }}</div>
+          {% endif %}
+          {% if  event.description is defined %}
+          <div class="event__description">{{ event.description }}</div>
+          {% endif %}
+          <div class="event__place">
+            {{ event.venue }}{% if  event.city is defined %}, {{ event.city }}{% endif %}
+          </div>
+        {% if  event.link is defined %}
+        </a>
+        {% else %}
+        </div>
+        {% endif %}
+      {% endfor %}
 
     </div>
   </div>

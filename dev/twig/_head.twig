@@ -3,14 +3,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="www.ideato.it">
 
     <title>
-      {% if title %}
-        {{ title }}
-      {% else %}
-        4devops - Una soluzione DevOps ai problemi della tua azienda
+      {% if metadata.site.title is defined %}
+        {{ metadata.site.title }} -
+        {% if title is defined %}
+          {{ title }}
+        {% else %}
+          4DevOps - Una soluzione DevOps ai problemi della tua azienda
+        {% endif %}
       {% endif %}
     </title>
 

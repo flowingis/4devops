@@ -6,16 +6,14 @@ list:
     city: Milano
     street: Via Stefanardo da Vimercate 28, Milano (MI)
     venue: Coworking LOGIN
-    image: nome-file.jpg
     link: https://www.eventbrite.it/e/biglietti-devops-docker-all-stars-28392717382
     soldout: true
   -
     date: 2016-11-29
-    title: Docker Global Mentor Day
-    description: I migliori Tool DevOps come Docker ed il suo ecosistema possono rivelarsi la scelta migliore per affrontare al meglio la Digital Trasformation.
+    title: DevOps & Docker All Stars
+    description: I migliori Tool DevOps come Docker ed il suo ecosistema possono rivelarsi la scelta migliore per affrontare al meglio la Digital Trasformation
     city: Peschiera Borromeo
     venue: Microsoft Italia
-    image: nome-file.jpg
     link: https://www.eventbrite.it/e/biglietti-devops-docker-all-stars-28392717382
     soldout: true
   -
@@ -23,7 +21,23 @@ list:
     title: Mesos Meetup
     description: Meetup italiano su DC/OS e mesos ospite eccezionale Jörg Schad, che terrà anche un workshop gratuito.
     city: Milano
-    venue: Talent Garden (via Merano)
-    image: nome-file.jpg
+    venue: TAG (via Merano)
     link: https://www.meetup.com/it-IT/mesos-dcos-Italia/events/235015161/
+    soldout: true
+  -
+    date: 2017-01-27
+    title: I4DI - Incontro 4DevOps Italia
+    description: Incontro 4DevOps Italia nasce dalla collaborazione di 4DevOps con Incontro DevOps Italia. L'IDI si fa in 4 e diventa I4DI, aggiungendo 4 appuntamenti annuali alla più grande conferenza DevOps italiana.
+    city: Roma
+    venue: TAG (via Mazzini)
+    link: http://www.incontrodevops.it/events/incontro-4devops-italia/
+    soldout: true
+  -
+    date: 2017-03-10
+    title: Progettare e far evolvere infrastrutture su AWS
+    description: Quinta edizione della più grande conferenza DevOps italiana che da anni porta a Bologna alcuni dei professionisti più conosciuti nel mondo Ops a discutere di casi e progetti concreti.
+    city: Bologna
+    venue: Hotel Savoia Regency
+    image: 2017-03-10.png
+    link: http://www.incontrodevops.it/
     soldout: true
