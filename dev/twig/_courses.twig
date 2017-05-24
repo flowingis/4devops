@@ -1,15 +1,17 @@
-<section class="courses" id="courses">
+<section class="container courses" id="courses">
   <div class="courses__container">
     <div class="courses__title">I NOSTRI CORSI</div>
 
     {% for course in metadata.collections.courses %}
     <div class="course__container">
-      <div class="course__title">
+      <div class="course__title {% if course.title == title %} course__title--current {% endif %}">
         {{ course.title }}
       </div>
+      {% if course.title != title %}
       <a href="{{ relativePath }}{{ course.path }}/" class="course__open">
         <span class="course__link">Scopri di più</span>
       </a>
+      {% endif %}
     </div>
     {% endfor %}
 

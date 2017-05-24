@@ -6,9 +6,9 @@ duration: 3 giorni
 level: base # base | intermedio | avanzato
 price: 145€
 participants: 10
+soldOut: false
 tickets: http://eventbrite.com/
 teacherName: Giovanni Ragazzini
-teacherImage: nome-docente.jpg
 teacherDescription: Giovanni Ragazzini è nato a forlì ed è un boss delle uccisioni multiple
 view: course.twig
 collection: courses

@@ -5,9 +5,15 @@
         {% if image is defined %}
         <div class="intro-text">
           <hr class="star-light">
+          {% if isCourse %}
+          <h1 class="course-title">
+            {{ title }}
+          </h1>
+          {% else %}
           <span class="skills">
             {{ title }}
           </span>
+          {% endif %}
           <div class="level-container">
             Livello <span class="level level--{{ level }}">{{ level }}</span>
           </div>

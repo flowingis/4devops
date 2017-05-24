@@ -1,24 +1,38 @@
-<section class="success" id="in-evidenza">
-    <div class="container">
+{% for event in metadata.events.list %}
+  {% if loop.last %}
+    <section class="success" id="in-evidenza">
+      <div class="container text-center">
         <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2>In evidenza</h2>
-                <hr class="star-light">
-            </div>
+          <div class="col-lg-12 text-center">
+            <h2>In evidenza</h2>
+            <hr class="star-light">
+          </div>
         </div>
         <div class="row">
-            <div class="col-lg-4 col-lg-offset-2">
-                <p>La prossima occasione di incontrarci sarà a Bologna, il 9-10 Marzo 2017, per la <a href="http://www.incontrodevops.it/">quinta edizione dell'Incontro DevOPS</a>.</p>
-            </div>
-            <div class="col-lg-4">
-                <p>Inoltre, il 2017 si prospetta ricco di eventi sui temi DevOps che ci stanno a cuore: automazione, cloud, microservizi e Agile. Lasciateci la vostra email, e verrete informati delle nostre iniziative.</p>
-            </div>
-    <div class="col-lg-8 col-lg-offset-2 text-center">
-                <a href="http://www.incontrodevops.it/events/idi2017/#registration_hook" class="btn btn-lg btn-outline" target="_blank">
-                    <i class="fa fa-link"></i>Vai alla conferenza</a>
-            </div>
+          <div class="col-lg-8 col-lg-offset-2">
+            {% if  event.title is defined %}
+              <h3>
+                {{ event.title }}
+              </h3>
+            {% endif %}
+            {% if  event.date is defined %}
+              <p><strong>{{ event.date|date('Y M d') }}</strong></p>
+            {% endif %}
+            {% if  event.description is defined %}
+              <p>{{ event.description }}</p>
+            {% endif %}
+          </div>
+          <div class="col-lg-8 col-lg-offset-2 text-center">
+            {% if  event.link is defined %}
+            <a href="http://www.incontrodevops.it/events/idi2017/#registration_hook" class="btn btn-lg btn-outline" target="_blank">
+              <i class="fa fa-link"></i>
+              Vai al link dell'evento
+            </a>
+            {% endif %}
+          </div>
 
         </div>
-
-    </div>
-</section>
+      </div>
+    </section>
+  {% endif %}
+{% endfor %}

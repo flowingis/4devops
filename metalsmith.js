@@ -1,15 +1,14 @@
 const AWS = require('aws-sdk')
-const browserSync = require('metalsmith-browser-sync')
 const collections = require('metalsmith-collections')
 const fs = require('fs')
 const ignore = require('metalsmith-ignore')
 const markdown = require('metalsmith-markdown')
 const metalsmith = require('metalsmith')
 const permalinks = require('metalsmith-permalinks')
+const serve = require('metalsmith-serve')
 const twig = require('metalsmith-twig')
+const watchFiles = require('metalsmith-watch')
 const yaml = require('js-yaml')
-
-
 
 var m = yaml.safeLoad(fs.readFileSync('config.yaml', 'utf-8'))
 m.metadata = {
@@ -47,9 +46,14 @@ function watch () {
     .destination(m.destination)
     .clean(m.clean)
     .use(ignore('data/*'))
-    .use(browserSync({
-      server: m.destination,
-      files: [m.source, `${m.twig.directory}/**/*.twig`]
+    .use(watchFiles({
+      paths: {
+        'source/**/*': true
+      }
+    }))
+    .use(serve({
+      port: 3000,
+      verbose: true
     }))
     .use(collections(m.collections))
     .use(markdown(m.markdown))
