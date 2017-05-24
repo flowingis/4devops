@@ -1,7 +1,29 @@
-companies:
+list:
   -
-    date: 2017-05-22
-    image: nome-file.jpg # il path viene precompilato
-    location: Piazza Sanguinetti, 106 - 47521 Cesena (FC)
-    title: Corso di prova
-    category: courses
+    name: BioDec
+    email: info@biodec.com
+    image: biodec.png
+    phone: +39 051 0548263
+    url: http://www.biodec.com
+    description: BioDec è stata la prima azienda italiana a occuparsi di bioinformatica, nel 2003. Dal 2010 ha sposato la causa DevOps, come strategia per gestire l’IT in modo più efficace e moderno. BioDec, all’interno di 4DevOps, segue in particolare il tema del monitoraggio e dei managed service. Dal punto di vista tecnico, l’esperienza di BioDec è nell’uso di software libero e di tecnologie come Ansible, Python, Nagios e Check_MK, e stack più recenti come Influxdb, Graphite e Grafana. BioDec è tra gli organizzatori dell’Incontro DevOps Italia, la più grande conferenza nazionale sul tema DevOps.
+  -
+    name: ideato
+    email: info@ideato.it
+    image: ideato.png
+    phone: +39 0547 480114
+    url: http://www.ideato.it
+    description: Ideato è una azienda focalizzata nel realizzare, rifattorizzare, e far scalare piattaforme software per il web. Realizziamo e gestiamo infrastrutture Cloud garantendone affidabilità e sicurezza. Flessibili nelle metodologie crediamo che il valore vada consegnato continuamente in tutte le fasi del progetto, aiutando i clienti in attività di discovery, proof of concept e implementazione anche di infrastrutture cloud particolarmente articolate. Siamo attivi nell’organizzazione di eventi community e incontri in molti ambiti dell'IT.
+  -
+    name: Kiratech
+    email: info@kiratech.it
+    image: kiratech.png
+    phone: +39 045 8347852
+    url: http://www.kiratech.it
+    description: Kiratech è uno dei principali rivenditori di tecnologia software, hardware e servizi che opera sul territorio italiano ed europeo. Da più di dieci anni Kiratech seleziona le migliori tecnologie in ambito IT per aiutare le aziende nel loro percorso di trasformazione digitale avvalendosi delle migliori metodologie in ambito Hybrid Cloud, Big Data Analytics, Security e DevOps. La nostra azienda ha intrapreso l’approccio DevOps dal 2012, e dal 2015 siamo il primo Official Docker Partner in Italia. Proponiamo soluzioni per il delivery applicativo, per l’automation, il monitoring e continuous integration and delivery. Siamo attivi nell’organizzazione di eventi community come Meetup ed incontri in ambito DevOps.
+  -
+    name: XPeppers
+    email: info@xpeppers.com
+    image: xpeppers.png
+    phone: +39 02 92852250
+    url: http://www.xpeppers.com
+    description: XPeppers è un’azienda di sviluppo software con focus su Agile, DevOps e Cloud. Il DevOps non è solo tools, è cambiamento metodologico, come azienda siamo in grado di guidare l’adozione di cultura e pratiche DevOps il cui obiettivo ultimo è rispondere velocemente ai cambiamenti del mercato. Facciamo formazione tramite corsi pubblici e onsite, confezionandoli in base all’esigenza del cliente.
