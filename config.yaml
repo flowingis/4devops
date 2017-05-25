@@ -4,7 +4,7 @@ destination: build
 collections:
   courses:
     path: ./source/courses/*.md
-    orderBy: level
+    orderBy: date
 markdown:
   smartypants: true
   gfm: true

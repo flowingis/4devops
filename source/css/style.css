@@ -47,6 +47,10 @@ mark {
   border-color: rgb(4, 177, 141);
 }
 
+.event__container:focus {
+  text-decoration: none;
+}
+
 .event__image img {
   width: 100%;
 }
@@ -193,6 +197,22 @@ mark {
   background-color: rgb(230, 95, 53);
 }
 
+.course-image {
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.course-image .course-title,
+.course-image .level-container {
+  text-shadow: 1px 2px 2px rgba(0,0,0,0.4);
+}
+
+.course-image .level {
+  border: 0;
+  text-shadow: none;
+}
+
 .course-details {
   margin-bottom: 32px;
   margin-top: 96px;
@@ -249,10 +269,11 @@ mark {
 
 .course-sold-out {
   background-color: #da3d0b;
+  border-radius: 100px;
   color: white;
-  text-transform: uppercase;
   display: inline-block;
-  padding: 16px;
+  padding: 0 16px;
+  text-transform: uppercase;
 }
 
 .hr {

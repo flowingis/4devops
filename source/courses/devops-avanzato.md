@@ -1,15 +1,16 @@
 ---
 image: default.png
 location: Piazza Sanguinetti, 106 - 47521 Cesena (FC)
-title: Corso di prova 2
+title: DevOps avanzato
 duration: 3 giorni
-level: base # base | intermedio | avanzato
+level: avanzato # base | intermedio | avanzato
 price: 145€
+date: 2017-05-23
 participants: 10
 soldOut: false
-tickets: http://eventbrite.com/
-teacherName: Giovanni Ragazzini
-teacherDescription: Giovanni Ragazzini è nato a forlì ed è un boss delle uccisioni multiple
+#tickets: http://eventbrite.com/
+#teacherName: Giovanni Ragazzini
+#teacherBio: Giovanni Ragazzini è nato a forlì ed è un boss delle uccisioni multiple
 view: course.twig
 collection: courses
 ---

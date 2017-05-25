@@ -1,17 +1,16 @@
 ---
 image: default.png
-location: Piazza Sanguinetti, 106 - 47521 Cesena (FC)
-title: Corso di prova 1
-duration: 1 giorno
+#location: Piazza Sanguinetti, 106 - 47521 Cesena (FC)
+title: Sviluppo di microservizi su AWS
+#duration: 3 giorni
 level: avanzato # base | intermedio | avanzato
-price: 600€
-participants: da 2 a 4
+#price: 145€
+date: 2017-05-31
+participants: 10
 soldOut: true
 tickets: http://eventbrite.com/
-teacherName: Mahatma Gandhi
-teacherImage: mahatma-gandhi.jpg
-teacherUrl: http://eventbrite.com/
-teacherBio: Mahatma Gandhi è nato a forlì ed è un boss, ha lavorato per anni con la NASA, nota società specializzata in plastiche nasali.
+#teacherName: Giovanni Ragazzini
+#teacherBio: Giovanni Ragazzini è nato a forlì ed è un boss delle uccisioni multiple
 view: course.twig
 collection: courses
 ---

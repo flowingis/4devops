@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 
+{% set uid = [] %}
+{% for i in 1..16 %}
+    {% set alpha = 'abcdefghijklmnopqrstuvwxyz' %}
+    {% set alphaUpper = alpha|upper %}
+    {% set numbers = '0123456789' %}
+    {% set randomCharacter = random(alpha ~ alphaUpper ~ numbers ~ '-_') %}
+    {% set uid = uid|merge([randomCharacter]) %}
+{% endfor %}
+{% set uid = ('?v=' ~ uid|join) %}
+
 {% include './_head.twig' %}
 
 <body id="page-top">
 
     {% include './_navbar.twig' %}
-    {% if image is defined %}
-      {% include './_header.twig' with { image: (relativePath ~ 'img/courses/' ~ image), isCourse: true}%}
+    {% if image %}
+      {% include './_header.twig' with { image: (relativePath ~ 'img/courses/' ~ image), isCourse: true} %}
     {% else %}
-      {% include './_header.twig' with { image: (relativePath ~ 'img/courses/default.png', isCourse: true }%}
+      {% include './_header.twig' with { image: (relativePath ~ 'img/courses/default.png'), isCourse: true } %}
     {% endif %}
 
     <div class="container">
