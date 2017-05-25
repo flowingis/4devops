@@ -11,6 +11,7 @@ markdown:
   tables: true
 permalinks:
   relative: true
+  permalink: true
 twig:
   directory: ./dev/twig
   view: base.twig
