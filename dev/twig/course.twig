@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 
+{% set uid = [] %}
+{% for i in 1..16 %}
+    {% set alpha = 'abcdefghijklmnopqrstuvwxyz' %}
+    {% set alphaUpper = alpha|upper %}
+    {% set numbers = '0123456789' %}
+    {% set randomCharacter = random(alpha ~ alphaUpper ~ numbers ~ '-_') %}
+    {% set uid = uid|merge([randomCharacter]) %}
+{% endfor %}
+{% set uid = ('?v=' ~ uid|join) %}
+
 {% include './_head.twig' %}
 
 <body id="page-top">
 
     {% include './_navbar.twig' %}
-    {% if image is defined %}
-      {% include './_header.twig' with { image: (relativePath ~ 'img/courses/' ~ image), isCourse: true}%}
+    {% if image %}
+      {% include './_header.twig' with { image: (relativePath ~ 'img/courses/' ~ image), isCourse: true} %}
     {% else %}
-      {% include './_header.twig' with { image: (relativePath ~ 'img/courses/default.png', isCourse: true }%}
+      {% include './_header.twig' with { image: (relativePath ~ 'img/courses/default.png'), isCourse: true } %}
     {% endif %}
 
     <div class="container">
@@ -23,44 +33,50 @@
               <a href="https://www.google.it/maps/place/{{ location|replace({ ' ': '+' }) }}" target="_blank">{{ location }}</a>
             </li>
             {% endif %}
+            {% if duration %}
             <li class="course-detail__item">
               <strong class="course-detail__title">Durata</strong>
               <i class="fa fa-clock-o course-detail__icon"></i>
               {{ duration }}
             </li>
+            {% endif %}
+            {% if participants %}
             <li class="course-detail__item">
               <strong class="course-detail__title">Partecipati</strong>
               <i class="fa fa-group course-detail__icon"></i>
               {{ participants }}
             </li>
+            {% endif %}
           </ul>
         </div>
         <div class="col-lg-6">
           <ul class="course-detail">
-            <li class="course-detail__item">
-              <strong class="course-detail__title">Prezzo</strong>
-              {{ price }}
-            </li>
             {% if soldOut %}
             <li class="course-detail__item">
               <strong class="course-detail__title">Biglietti</strong>
               <strong class="course-sold-out">Esauriti</strong>
             </li>
             {% else %}
+              {% if tickets %}
+                <li class="course-detail__item">
+                  <strong class="course-detail__title">Biglietti</strong>
+                  <a class="course-buy-ticket" href="{% if tickets is defined %}{{ tickets }}{% else %}mailto:{{ metadata.site.email }}?subject=Richiesta biglietto per corso: {{ title }}{% endif %}">Acquista</a>
+                </li>
+              {% endif %}
+            {% endif %}
+            {% if price %}
             <li class="course-detail__item">
-              <strong class="course-detail__title">Biglietti</strong>
-              <a class="course-buy-ticket" href="{% if tickets is defined %}{{ tickets }}{% else %}mailto:{{ metadata.site.email }}?subject=Richiesta biglietto per corso: {{ title }}{% endif %}">Acquista</a>
+              <strong class="course-detail__title">Prezzo</strong>
+              {{ price }}
             </li>
             {% endif %}
-            <li>
-            </li>
           </ul>
         </div>
       </div>
       <hr class="hr">
     </div>
 
-    {% if teacherBio %}
+    {% if teacherBio and teacherName %}
     <div class="container">
       <div class="teacher">
         <div class="teacher__avatar">
@@ -87,11 +103,13 @@
     </div>
     {% endif %}
 
+    {% if contents|trim != '' %}
     <div class="container">
       <h3>Dettagli corso</h3>
       {{ contents }}
       <hr class="hr hr--big">
     </div>
+    {% endif %}
 
     {% include './_courses.twig' %}
     <div class="container">

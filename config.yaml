@@ -4,13 +4,14 @@ destination: build
 collections:
   courses:
     path: ./source/courses/*.md
-    orderBy: level
+    orderBy: date
 markdown:
   smartypants: true
   gfm: true
   tables: true
 permalinks:
   relative: true
+  permalink: true
 twig:
   directory: ./dev/twig
   view: base.twig
