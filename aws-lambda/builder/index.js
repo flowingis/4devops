@@ -11,6 +11,7 @@ const browserSync = require('metalsmith-browser-sync')
 const collections = require('metalsmith-collections')
 var s3 = require('s3');
 var AWS = require('aws-sdk');
+const ignore = require('metalsmith-ignore')
 
 exports.handler = function(event, context) {
 
@@ -28,12 +29,18 @@ download('https://s3.eu-central-1.amazonaws.com/it-4devops-code/4devops-archive.
         extract("/tmp/4devops-archive.zip", {dir: "/tmp/4devops-archive"}, function (err) {
             if (err) throw err;
             console.log('extracted');
-            const m = yaml.safeLoad(fs.readFileSync('/tmp/4devops-archive/4devops-master/config.yaml'))
+            var m = yaml.safeLoad(fs.readFileSync('/tmp/4devops-archive/4devops-master/config.yaml'))
+            m.metadata = {
+              companies: yaml.safeLoad(fs.readFileSync('/tmp/4devops-archive/4devops-master/source/data/companies.yaml', 'utf-8')),
+              events: yaml.safeLoad(fs.readFileSync('/tmp/4devops-archive/4devops-master/source/data/events.yaml', 'utf-8')),
+              site: yaml.safeLoad(fs.readFileSync('/tmp/4devops-archive/4devops-master/source/data/site.yaml', 'utf-8'))
+            }
             metalsmith('/tmp/4devops-archive/4devops-master')
             .source(m.source)
+            .metadata(m.metadata)
             .destination(m.destination)
             .clean(m.clean)
-            .use(metadata(m.metadata))
+            .use(ignore('data/*'))
             .use(collections(m.collections))
             .use(markdown(m.markdown))
             .use(permalinks(m.permalinks))
@@ -61,5 +68,3 @@ download('https://s3.eu-central-1.amazonaws.com/it-4devops-code/4devops-archive.
 });
 });
 }
-    
-    

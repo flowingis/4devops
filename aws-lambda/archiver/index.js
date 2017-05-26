@@ -13,7 +13,7 @@ exports.handler = function(event, context) {
             fs.readFile('/tmp/4devops-archive.zip', function (err, data) {
                 if (err) throw err;
 
-                var params = {Bucket: 'it-4devops-code', Body: data, Key: '4devops-archive.zip'};
+                var params = {Bucket: 'it-4devops-code', Body: data, Key: '4devops-archive.zip', ACL: 'public-read'};
                 var s3 = new AWS.S3();
                 s3.upload(params, function(err, data) {
                     console.log(err, data);
