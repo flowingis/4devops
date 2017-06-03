@@ -5,7 +5,7 @@ list:
     image: biodec.png
     phone: +39 051 0548263
     url: http://www.biodec.com
-    description: BioDec è stata la prima azienda italiana a occuparsi di bioinformatica, nel 2003. Dal 2010 ha sposato la causa DevOps, come strategia per gestire l’IT in modo più efficace e moderno. BioDec, all’interno di 4DevOps, segue in particolare il tema del monitoraggio e dei managed service. Dal punto di vista tecnico, l’esperienza di BioDec è nell’uso di software libero e di tecnologie come Ansible, Python, Nagios e Check_MK, e stack più recenti come Influxdb, Graphite e Grafana. BioDec è tra gli organizzatori dell’Incontro DevOps Italia, la più grande conferenza nazionale sul tema DevOps.
+    description: BioDec è stata la prima azienda italiana a occuparsi di bioinformatica, nel 2003. Dal 2010 ha sposato la causa DevOps, come strategia per gestire l’IT in modo più efficace e moderno. BioDec, all’interno di 4DevOps, segue in particolare il tema del monitoraggio e dell’automazione. Dal punto di vista tecnico, l’esperienza di BioDec è nell’uso di software libero e di tecnologie come Ansible, Python, Nagios e Check_MK, e stack più recenti come Influxdb, Graphite e Grafana. BioDec è tra gli organizzatori dell’Incontro DevOps Italia, la più grande conferenza nazionale sul tema DevOps.
   -
     name: ideato
     email: info@ideato.it
