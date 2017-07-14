@@ -38,7 +38,7 @@ list:
     description: Quinta edizione della più grande conferenza DevOps italiana che da anni porta a Bologna alcuni dei professionisti più conosciuti nel mondo Ops a discutere di casi e progetti concreti.
     city: Bologna
     venue: Hotel Savoia Regency
-    image: 2017-03-10.png
+    image: devopsitalia.png
     link: http://www.incontrodevops.it/
     soldout: true
   -
@@ -47,6 +47,6 @@ list:
     description: Sesta edizione della più grande conferenza DevOps italiana, che da anni porta a Bologna alcuni dei professionisti più conosciuti nel mondo DevOps a discutere di casi e progetti concreti.
     city: Bologna
     venue: Hotel Savoia Regency
-    image: 2017-03-10.png
+    image: devopsitalia2017-crop.png
     link: http://www.incontrodevops.it/
     soldout: false
