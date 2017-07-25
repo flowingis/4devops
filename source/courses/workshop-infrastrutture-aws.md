@@ -4,11 +4,11 @@ location: Piazza Sanguinetti, 106 - 47521 Cesena (FC)
 title: Progettare e far evolvere infrastrutture AWS
 duration: 1 giorno
 level: intermedio # base | intermedio | avanzato
-price: 145€
-date: 2017-09-10
+# price: 145€
+# date: 2017-09-10
 participants: 10
-soldOut: false
-tickets: http://eventbrite.com/
+# soldOut: false
+# tickets: http://eventbrite.com/
 teacherName: Alessandro Mazzoli
 teacherImage: alessandro-mazzoli.png
 teacherUrl: https://twitter.com/alendmazz

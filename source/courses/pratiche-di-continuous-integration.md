@@ -4,11 +4,11 @@ location: Piazza Sanguinetti, 106 - 47521 Cesena (FC)
 title: Pratiche di continuous integration
 duration: 1 giorno
 level: base # base | intermedio | avanzato
-price: 145€
-date: 2017-09-10
+# price: 145€
+# date: 2017-09-10
 participants: 10
-soldOut: false
-tickets: http://eventbrite.com/
+# soldOut: false
+# tickets: http://eventbrite.com/
 teacherName: Michele Orselli
 teacherImage: michele-orselli.jpg
 teacherUrl: https://twitter.com/_orso_
