@@ -3,7 +3,7 @@ image: default.png
 location: Piazza Sanguinetti, 106 - 47521 Cesena (FC)
 title: Pratiche di continuous integration
 duration: 1 giorno
-level: base # base | intermedio | avanzato
+level: intermedio # base | intermedio | avanzato
 # price: 145€
 # date: 2017-09-10
 participants: 10
