@@ -10,7 +10,7 @@ participants: 10
 # soldOut: false
 # tickets: http://eventbrite.com/
 teacherName: Alessandro Mazzoli
-teacherImage: alessandro-mazzoli.png
+teacherImage: alessandro-mazzoli.jpg
 teacherUrl: https://twitter.com/alendmazz
 teacherBio: SysAdmin @ideato, AWS Solution Arch, AlmaMater Computer Science graduate @ Cesena
 view: course.twig
