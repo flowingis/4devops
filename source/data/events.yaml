@@ -1,46 +1,40 @@
 list:
   -
-    date: 2016-11-19
-    title: Docker Global Mentor Day
-    description: Il Global Mentor Day di Milano sarà un'opportunità per approcciarsi all'utilizzo di Docker. Ci saranno dei lab per principianti e per utenti intermedi, e i Docker Mentors saranno a disposizione per rispondere alle tue domande.
-    city: Milano
-    street: Via Stefanardo da Vimercate 28, Milano (MI)
-    venue: Coworking LOGIN
-    link: https://www.eventbrite.it/e/biglietti-devops-docker-all-stars-28392717382
-    soldout: true
-  -
-    date: 2016-11-29
-    title: DevOps & Docker All Stars
-    description: I migliori Tool DevOps come Docker ed il suo ecosistema possono rivelarsi la scelta migliore per affrontare al meglio la Digital Trasformation
-    city: Peschiera Borromeo
-    venue: Microsoft Italia
-    link: https://www.eventbrite.it/e/biglietti-devops-docker-all-stars-28392717382
-    soldout: true
-  -
-    date: 2016-12-13
-    title: Mesos Meetup
-    description: Meetup italiano su DC/OS e mesos ospite eccezionale Jörg Schad, che terrà anche un workshop gratuito.
-    city: Milano
-    venue: TAG (via Merano)
-    link: https://www.meetup.com/it-IT/mesos-dcos-Italia/events/235015161/
-    soldout: true
-  -
-    date: 2017-01-27
-    title: I4DI - Incontro 4DevOps Italia
-    description: Incontro 4DevOps Italia nasce dalla collaborazione di 4DevOps con Incontro DevOps Italia. L'IDI si fa in 4 e diventa I4DI, aggiungendo 4 appuntamenti annuali alla più grande conferenza DevOps italiana.
-    city: Roma
-    venue: TAG (via Mazzini)
-    link: http://www.incontrodevops.it/events/incontro-4devops-italia/
-    soldout: true
-  -
-    date: 2017-03-10
-    title: Incontro DevOps Italia
-    description: Quinta edizione della più grande conferenza DevOps italiana che da anni porta a Bologna alcuni dei professionisti più conosciuti nel mondo Ops a discutere di casi e progetti concreti.
+    date: 2018-03-08
+    title: Workshop - Build your serverless glue application using AWS Lambda
+    description: In the cloud transformation era, the parts that we need to adapt are infrequently pieces of code; most likely we interact with heterogeneous, API-driven, event driven and cloud oriented services.
     city: Bologna
     venue: Hotel Savoia Regency
-    image: devopsitalia.png
-    link: http://www.incontrodevops.it/
-    soldout: true
+    image: build-your-own-serverless-glue-application-using-aws-lambda.png
+    link: http://www.incontrodevops.it/events/build-serverless-glue-application-using-aws-lambda/
+    soldout: false
+  -
+    date: 2018-03-08
+    title: Workshop - Docker & Kubernetes
+    description: Per le aziende che utilizzano i container, la funzione principale per cui viene utilizzato Kubernetes è l’orchestrazione. Quest’ultima consente di interagire con interi gruppi di container contemporaneamente, pianificare e implementare un registro dei container, oltre che di fornire servizi di rete, storage, sicurezza e telemetria.
+    city: Bologna
+    venue: Hotel Savoia Regency
+    image: workshop-docker-kubernetes.png
+    link: http://www.incontrodevops.it/events/corso-docker-kubertenes-devops-academy/
+    soldout: false
+  -
+    date: 2018-03-08
+    title: Workshop - Progettare e far evolvere infrastrutture AWS
+    description: Questo workshop è rivolto a sistemisti, cloud architect, it managers che già utilizzano i servizi di AWS e che vogliono approfondire gli aspetti legati al design di infrastrutture resilienti e altamente disponibili.
+    city: Bologna
+    venue: Hotel Savoia Regency
+    image: 08-03-2018-incontrodevops.png
+    link: http://www.incontrodevops.it/events/workshop-infrastrutture-aws/
+    soldout: false
+  -
+    date: 2018-03-08
+    title: Glustered 2018
+    description: Glustered 2018 will be a gathering of the Gluster community, scheduled the day before Incontro DevOps Italia 2018 (IDI2018) on March 8th and in the same venue in Bologna, Italy. Gluster is a free and open source software scalable network filesystem.
+    city: Bologna
+    venue: Hotel Savoia Regency
+    image: gluster-summit-2017.jpg
+    link: http://www.incontrodevops.it/events/glustered-2018/
+    soldout: false
   -
     date: 2018-03-09
     title: Incontro DevOps Italia
