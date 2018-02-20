@@ -43,6 +43,6 @@ npm run watch
 
 
 ```
-push to Github, automatically will be deployed using NodeJS on top of Lambda
+Just push on Github, automatically will be deployed using NodeJS on top of Lambda
 
 ```
