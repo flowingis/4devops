@@ -42,7 +42,5 @@ npm run watch
 #### Deploy
 
 
-```
 Just push on Github, automatically will be deployed using NodeJS on top of Lambda
 
-```
