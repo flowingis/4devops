@@ -41,8 +41,8 @@ npm run watch
 
 #### Deploy
 
-Leave this command to the push hook to avoid additional local configurations to enable the deploy script.
 
 ```
-npm run deploy
+push to Github, automatically will be deployed using NodeJS on top of Lambda
+
 ```
